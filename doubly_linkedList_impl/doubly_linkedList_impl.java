@@ -6,5 +6,6 @@ public class doubly_linkedList_impl
       o.insertAtTheBegining(10);
       o.insertAtTheBegining(12);
       o.insertAtTheBegining(17);
+      o.traverseForward();
   }
 }

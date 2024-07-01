@@ -15,4 +15,13 @@ public class Operations extends DoublyLinkedList
       tail = n;
     }
   }
+  public void traverseForward()
+  {
+    Node cur = head;
+    while(cur!=null)
+    {
+      System.out.println(cur.data + " ");
+      cur = cur.next;
+    }
+  }
 }
