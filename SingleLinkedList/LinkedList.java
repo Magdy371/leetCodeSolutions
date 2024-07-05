@@ -24,30 +24,6 @@ public class LinkedList <T>{
         }
         length++;
     }
-    public void add(int position , T data){ 
-        if(position <1 || position > length+1)
-        {
-            System.out.println("Invalid Position");
-            return;
-        }
-        if (position==1)
-        {
-            Node<T> temp = head;
-            head = new Node<>(data);
-            head.next = temp;
-            length++;
-            return;
-        }
-        Node<T> current = head;
-        for(int i=0;i<position-1;i++)
-        {
-            current = current.next;
-        }
-        Node<T> newNode = new Node<>(data);
-        newNode.next = current.next;
-        current.next = newNode;
-        length++;
-    }
     public String toString()
     {
         StringBuilder result = new StringBuilder("{");
@@ -59,5 +35,27 @@ public class LinkedList <T>{
         }
         result.append("null }");
         return result.toString();
+    }
+    public void remove(T key)
+    {
+        Node<T> prev = null;
+        Node<T> current = head;
+        while(current!=null)
+        {
+            if(current.data.equals(key))
+            {
+                if(prev == null)
+                {
+                    head = current.next;
+                }else{
+                    prev.next= current.next;
+                }
+                length--;
+                return;
+            }
+            prev = current;
+            current= current.next;
+        }
+        System.out.println("the value not found");
     }
 }
