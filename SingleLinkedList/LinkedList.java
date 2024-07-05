@@ -58,4 +58,9 @@ public class LinkedList <T>{
         }
         System.out.println("the value not found");
     }
+    public void clear()
+    {
+        head = null;
+        length = 0;
+    }
 }
