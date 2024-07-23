@@ -1,5 +1,3 @@
-package javaCore.leetCode;
-
 public class convertRomanToInt {
     static int value(char r)
     {
