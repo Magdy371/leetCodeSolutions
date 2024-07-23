@@ -1,5 +1,3 @@
-package javaCore.leetCode;
-
 public class RemoveDuplicates {
     public static int operations(int[] nums)
     {
